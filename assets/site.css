@@ -44,7 +44,7 @@ h1, h2, h3, .display {
   font-size: 12px;
   color: var(--muted);
 }
-.h-hero { font-size: clamp(2.9rem, 8.5vw, 7.5rem); }
+.h-hero { font-size: clamp(2.5rem, 8.5vw, 7.5rem); }
 .h-xl   { font-size: clamp(2.3rem, 5.5vw, 4.6rem); line-height: 1; }
 .h-lg   { font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: 1.02; }
 .h-md   { font-size: clamp(1.5rem, 2.4vw, 2.1rem); line-height: 1.05; }
@@ -91,6 +91,8 @@ h1, h2, h3, .display {
 .site-header.solid { background: rgba(241,239,233,0.92); backdrop-filter: blur(8px); border-bottom-color: var(--line); padding: 16px 28px; }
 .site-header .nav-link, .site-header .brand, .site-header .menu-toggle { color: var(--cream); }
 .site-header.solid .nav-link, .site-header.solid .brand, .site-header.solid .menu-toggle { color: var(--head); }
+/* pages without a dark hero: always-dark header text (home stays cream-over-hero) */
+.site-header.header-dark .nav-link, .site-header.header-dark .brand, .site-header.header-dark .menu-toggle { color: var(--head); }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand-mark { height: 30px; width: 30px; object-fit: contain; }
 .brand-text { font-family: "Cormorant", serif; text-transform: uppercase; letter-spacing: 0.02em; font-size: 22px; line-height: 1; }
@@ -111,6 +113,18 @@ h1, h2, h3, .display {
 @media (max-width: 880px) {
   .main-nav { display: none; }
   .menu-toggle { display: inline-flex; }
+}
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .wrap { padding: 0 20px; }
+  .site-header, .site-header.solid, .site-header.header-dark { padding: 14px 20px; }
+  .brand-text { font-size: 17px; }
+  .brand-mark { height: 26px; width: 26px; }
+  .brand { gap: 9px; }
+  .section { padding: 64px 0; }
+  .lead { font-size: 1.02rem; }
+  .mobile-nav a { font-size: 28px; }
+  .filter-bar { gap: 20px; }
 }
 
 /* ---- Hero ---- */
