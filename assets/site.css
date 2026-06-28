@@ -1,0 +1,62 @@
+/* ===== Creative Concepts — shared theme ===== */
+:root {
+  --bg: #f8f7f4;
+  --surface: #fdfcf9;
+  --line: #e5e4de;
+  --ink: #14152a;
+  --ink-soft: #45474c;
+  --accent: #2d4470;
+  --accent-deep: #1e1b3a;
+  --midnight: #14152a;
+}
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Hanken Grotesk", system-ui, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.font-serif { font-family: "Libre Caslon Text", Georgia, serif; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); border-left: 1px solid var(--line); }
+::-webkit-scrollbar-thumb { background: #c4c3bd; }
+::-webkit-scrollbar-thumb:hover { background: #9c9b95; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* accordion */
+.accordion-content { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.35s ease-out; }
+.accordion-content.is-open { grid-template-rows: 1fr; }
+.accordion-inner { overflow: hidden; }
+
+/* noise overlay */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* hero Ken Burns */
+@keyframes kenburns { 0% { transform: scale(1.04) translate(0,0); } 100% { transform: scale(1.14) translate(-1.5%,-1.5%); } }
+.kenburns { animation: kenburns 18s ease-out forwards; }
+
+/* loading screen */
+#loader {
+  position: fixed; inset: 0; z-index: 200; background: var(--bg);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 28px; transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+#loader.done { opacity: 0; visibility: hidden; pointer-events: none; }
+#loader-bar-track { width: 180px; height: 1px; background: var(--line); overflow: hidden; }
+#loader-bar-fill { height: 100%; width: 0%; background: var(--ink); }
+.loader-logo { animation: loaderPulse 2.4s ease-in-out infinite; }
+@keyframes loaderPulse { 0%,100% { opacity: 0.85; } 50% { opacity: 1; } }
+body.is-loading { overflow: hidden; height: 100vh; }
+
+/* scroll reveal initial state (set by JS too, but guard against flash) */
+.gsap-fade-up, .gsap-hero { will-change: transform, opacity; }
+
+/* portfolio filter */
+.proj-item.is-hidden { display: none; }
+.filter-btn.is-active { background: var(--ink); color: var(--surface); }

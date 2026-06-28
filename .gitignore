@@ -1,0 +1,8 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+*.log
+
+# Source design dumps (kept out of the published site)
+stitch_creative_concepts_reimagined/
+stitch_creative_concepts_reimagined (1) full/

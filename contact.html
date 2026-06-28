@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Creative Concepts — Andheri West, Mumbai. Call 022 4265 4353 or send a project request." />
+    <title>Contact | Creative Concepts</title>
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+      tailwind.config = { theme: { extend: {
+        colors: { bg:"#F8F7F4", surface:"#FDFCF9", line:"#E5E4DE", ink:"#14152A", "ink-soft":"#45474C", accent:"#2D4470", "accent-deep":"#1E1B3A", midnight:"#14152A" },
+        fontFamily: { serif:['"Libre Caslon Text"',"Georgia","serif"], sans:['"Hanken Grotesk"',"system-ui","sans-serif"] },
+        borderRadius: { DEFAULT:"0px", sm:"0px", md:"0px", lg:"0px" },
+      }}};
+    </script>
+    <link rel="stylesheet" href="assets/site.css" />
+    <style>
+      .field { border:0; border-bottom:1px solid var(--line); background:transparent; padding:10px 0; width:100%; font-size:15px; color:var(--ink); }
+      .field:focus { outline:none; border-bottom-color:var(--accent); }
+      .field::placeholder { color:#9c9b95; }
+    </style>
+  </head>
+
+  <body class="is-loading font-sans font-light selection:bg-accent selection:text-white relative">
+    <div id="loader"><img src="assets/logo.png" alt="Creative Concepts" class="loader-logo w-12 h-12 object-contain" /><div class="text-[10px] tracking-[0.4em] uppercase text-ink-soft font-normal">Creative Concepts</div><div id="loader-bar-track"><div id="loader-bar-fill"></div></div></div>
+
+    <div class="bg-midnight text-bg/80 text-[10px] sm:text-xs tracking-[0.25em] uppercase text-center py-2 px-3 relative z-50">Crafting considered interiors &amp; exteriors across India · Est. Mumbai</div>
+
+    <main class="max-w-[1440px] mx-auto bg-surface border-x border-line relative min-h-screen shadow-2xl shadow-black/[0.03] flex flex-col">
+      <div class="absolute top-0 left-0 w-3 h-3 border-t border-l border-ink/20 z-50 pointer-events-none"></div>
+      <div class="absolute top-0 right-0 w-3 h-3 border-t border-r border-ink/20 z-50 pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-ink/20 z-50 pointer-events-none"></div>
+      <div class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-ink/20 z-50 pointer-events-none"></div>
+
+      <header class="flex items-center justify-between px-5 sm:px-6 py-4 border-b border-line relative z-40 bg-surface/90 backdrop-blur-sm sticky top-0">
+        <a href="index.html" class="flex items-center gap-2.5"><img src="assets/logo.png" alt="Creative Concepts logo" class="h-7 w-7 object-contain" /><span class="text-base sm:text-lg font-normal tracking-tight uppercase font-serif leading-none">Creative Concepts</span></a>
+        <nav class="hidden lg:flex space-x-8 text-[11px] tracking-[0.2em] uppercase text-ink-soft"><a href="index.html" class="hover:text-ink transition-colors">Home</a><a href="about.html" class="hover:text-ink transition-colors">About</a><a href="portfolio.html" class="hover:text-ink transition-colors">Portfolio</a><a href="contact.html" class="text-ink">Contact</a></nav>
+        <div class="flex items-center gap-4"><a href="#form" class="hidden sm:inline-block bg-ink text-surface text-[10px] tracking-[0.2em] uppercase px-5 py-2.5 hover:bg-accent transition-colors font-normal">Send Request</a><button id="menu-btn" class="lg:hidden text-ink" aria-label="Open menu"><iconify-icon icon="solar:hamburger-menu-linear" width="26"></iconify-icon></button></div>
+      </header>
+
+      <div id="mobile-menu" class="lg:hidden fixed inset-0 z-[60] bg-bg/98 backdrop-blur-md flex-col items-center justify-center gap-8 hidden"><button id="menu-close" class="absolute top-5 right-5 text-ink" aria-label="Close menu"><iconify-icon icon="solar:close-circle-linear" width="32"></iconify-icon></button><a href="index.html" class="mobile-link font-serif text-3xl">Home</a><a href="about.html" class="mobile-link font-serif text-3xl">About</a><a href="portfolio.html" class="mobile-link font-serif text-3xl">Portfolio</a><a href="contact.html" class="mobile-link font-serif text-3xl">Contact</a></div>
+
+      <!-- HERO -->
+      <section class="bg-surface border-b border-line px-5 sm:px-8 pt-16 pb-12">
+        <div class="gsap-hero flex items-center gap-3 mb-5"><span class="h-[1px] w-10 bg-accent"></span><span class="text-[10px] sm:text-xs tracking-[0.35em] uppercase text-ink-soft font-normal">Get in touch</span></div>
+        <h1 class="gsap-hero font-serif text-4xl sm:text-6xl tracking-tight leading-[1.05] max-w-3xl">Let's discuss your space.</h1>
+        <p class="gsap-hero text-sm text-ink-soft leading-loose max-w-xl mt-6">Tell us about your project — interior, exterior or turnkey. We'll get back to you to arrange a consultation.</p>
+      </section>
+
+      <!-- CONTACT GRID -->
+      <section class="bg-line border-b border-line grid grid-cols-1 lg:grid-cols-2 gap-[1px]">
+        <!-- details -->
+        <div class="bg-surface p-8 lg:p-14">
+          <div class="space-y-8">
+            <div class="flex items-start gap-4 gsap-fade-up"><iconify-icon icon="solar:phone-linear" width="22" class="text-accent mt-1"></iconify-icon><div><span class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">Phone</span><a href="tel:02242654353" class="block font-serif text-xl mt-1 hover:text-accent transition-colors">022 4265 4353</a></div></div>
+            <div class="flex items-start gap-4 gsap-fade-up"><iconify-icon icon="solar:letter-linear" width="22" class="text-accent mt-1"></iconify-icon><div><span class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">Email</span><a href="mailto:mayuradw@yahoo.co.in" class="block font-serif text-xl mt-1 hover:text-accent transition-colors break-all">mayuradw@yahoo.co.in</a></div></div>
+            <div class="flex items-start gap-4 gsap-fade-up"><iconify-icon icon="solar:map-point-linear" width="22" class="text-accent mt-1"></iconify-icon><div><span class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">Address</span><a href="https://maps.app.goo.gl/eCdrdXRG8qYty6dr5" target="_blank" rel="noopener" class="block font-serif text-xl mt-1 hover:text-accent transition-colors leading-snug">34/1, Om Heera Panna,<br />Andheri West, Mumbai 400053</a></div></div>
+          </div>
+
+          <div class="mt-10 pt-10 border-t border-line gsap-fade-up">
+            <a href="https://maps.app.goo.gl/eCdrdXRG8qYty6dr5" target="_blank" rel="noopener" class="group relative block aspect-[16/9] overflow-hidden bg-line">
+              <img src="assets/projects/proj-b4.png" alt="Studio location" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+              <div class="absolute inset-0 bg-midnight/40 flex items-center justify-center"><span class="bg-surface text-ink text-[10px] tracking-[0.2em] uppercase px-5 py-3 flex items-center gap-2">Open in Maps <iconify-icon icon="solar:arrow-right-up-linear" width="14"></iconify-icon></span></div>
+            </a>
+          </div>
+
+          <div class="mt-10 pt-10 border-t border-line flex gap-3 gsap-fade-up">
+            <a href="#" aria-label="Instagram" class="w-10 h-10 border border-line flex items-center justify-center hover:bg-ink hover:text-surface transition-colors"><iconify-icon icon="mdi:instagram" width="18"></iconify-icon></a>
+            <a href="#" aria-label="Pinterest" class="w-10 h-10 border border-line flex items-center justify-center hover:bg-ink hover:text-surface transition-colors"><iconify-icon icon="mdi:pinterest" width="18"></iconify-icon></a>
+            <a href="#" aria-label="Facebook" class="w-10 h-10 border border-line flex items-center justify-center hover:bg-ink hover:text-surface transition-colors"><iconify-icon icon="mdi:facebook" width="18"></iconify-icon></a>
+          </div>
+        </div>
+
+        <!-- form -->
+        <div id="form" class="bg-surface p-8 lg:p-14">
+          <h2 class="font-serif text-2xl sm:text-3xl tracking-tight mb-8 gsap-fade-up">Send a message</h2>
+          <form action="https://formsubmit.co/mayuradw@yahoo.co.in" method="POST" class="space-y-7 gsap-fade-up">
+            <input type="hidden" name="_subject" value="New project enquiry — Creative Concepts" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" style="display:none" />
+            <div><label class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">Name</label><input class="field mt-2" type="text" name="name" placeholder="Your full name" required /></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-7">
+              <div><label class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">Email</label><input class="field mt-2" type="email" name="email" placeholder="you@email.com" required /></div>
+              <div><label class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">Phone</label><input class="field mt-2" type="tel" name="phone" placeholder="Optional" /></div>
+            </div>
+            <div><label class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">Project Type</label>
+              <select class="field mt-2" name="project_type"><option>Interior Design</option><option>Exterior &amp; Facade</option><option>Turnkey Project</option><option>Commercial Fit-out</option><option>Other</option></select>
+            </div>
+            <div><label class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">Message</label><textarea class="field mt-2" name="message" rows="4" placeholder="Tell us about your space and timeline" required></textarea></div>
+            <p class="text-[11px] text-ink-soft leading-relaxed">We promise not to disclose your personal information to third parties.</p>
+            <button type="submit" class="inline-flex items-center gap-3 bg-ink text-surface text-[11px] tracking-[0.2em] uppercase px-9 py-4 hover:bg-accent transition-colors font-normal">Send Message <iconify-icon icon="solar:arrow-right-up-linear" width="16"></iconify-icon></button>
+          </form>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="bg-surface border-b border-line px-5 sm:px-8 py-16 sm:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div class="lg:col-span-4"><span class="text-[10px] tracking-[0.3em] uppercase text-accent font-semibold">Helpful</span><h2 class="font-serif text-2xl sm:text-3xl tracking-tight mt-2">Frequently Asked</h2></div>
+          <div class="lg:col-span-7 lg:col-start-6 border-t border-line" id="faq">
+            <div class="border-b border-line"><button class="w-full py-5 flex items-center justify-between text-left faq-toggle"><span class="text-sm flex items-center font-normal pr-4"><span class="text-ink-soft mr-4 text-xs">01.</span>What services does Creative Concepts offer?</span><iconify-icon icon="solar:alt-arrow-down-linear" class="text-ink-soft transition-transform duration-300 shrink-0"></iconify-icon></button><div class="accordion-content"><div class="accordion-inner"><p class="text-sm text-ink-soft pb-5 leading-loose pr-8">Comprehensive interior and exterior design — residential and commercial — from concept and space planning through bespoke joinery, styling and full turnkey execution.</p></div></div></div>
+            <div class="border-b border-line"><button class="w-full py-5 flex items-center justify-between text-left faq-toggle"><span class="text-sm flex items-center font-normal pr-4"><span class="text-ink-soft mr-4 text-xs">02.</span>Where are you based and do you travel?</span><iconify-icon icon="solar:alt-arrow-down-linear" class="text-ink-soft transition-transform duration-300 shrink-0"></iconify-icon></button><div class="accordion-content"><div class="accordion-inner"><p class="text-sm text-ink-soft pb-5 leading-loose pr-8">Our studio is in Andheri West, Mumbai. We take on projects across the city and beyond, with project managers coordinating execution wherever your space is.</p></div></div></div>
+            <div class="border-b border-line"><button class="w-full py-5 flex items-center justify-between text-left faq-toggle" aria-expanded="true"><span class="text-sm flex items-center font-normal pr-4"><span class="text-ink-soft mr-4 text-xs">03.</span>How does the design process work?</span><iconify-icon icon="solar:alt-arrow-up-linear" class="text-ink-soft transition-transform duration-300 rotate-180 shrink-0"></iconify-icon></button><div class="accordion-content is-open"><div class="accordion-inner"><p class="text-sm text-ink-soft pb-5 leading-loose pr-8">It begins with a consultation to understand your vision and budget, followed by concept development, detailed design, and precise on-site execution — a transformative experience from first sketch to final reveal.</p></div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-midnight text-bg mt-auto relative overflow-hidden bg-noise">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 pt-16 pb-14 relative z-10">
+          <div class="flex flex-col"><a href="index.html" class="flex items-center gap-2.5 mb-6"><img src="assets/logo.png" alt="" class="h-7 w-7 object-contain" /><span class="text-lg font-normal tracking-tight uppercase font-serif text-white">Creative Concepts</span></a><p class="text-xs text-white/50 leading-relaxed max-w-xs">Crafting modern interiors &amp; exteriors with intentional, functional and timeless design — based in Mumbai.</p></div>
+          <div class="flex flex-col"><h5 class="text-[11px] tracking-[0.2em] uppercase font-normal mb-6 text-white">Studio</h5><div class="flex flex-col space-y-4 text-xs text-white/50 tracking-wide"><a href="about.html" class="hover:text-white transition-colors">About</a><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a><a href="index.html#disciplines" class="hover:text-white transition-colors">Expertise</a><a href="index.html#journal" class="hover:text-white transition-colors">Journal</a></div></div>
+          <div class="flex flex-col"><h5 class="text-[11px] tracking-[0.2em] uppercase font-normal mb-6 text-white">Contact</h5><div class="flex flex-col space-y-4 text-xs text-white/50 tracking-wide"><span>Andheri West, Mumbai 400053</span><a href="tel:02242654353" class="hover:text-white transition-colors">022 4265 4353</a><a href="mailto:mayuradw@yahoo.co.in" class="hover:text-white transition-colors break-all">mayuradw@yahoo.co.in</a></div></div>
+          <div class="flex flex-col"><h5 class="text-[11px] tracking-[0.2em] uppercase font-normal mb-6 text-white">Connect</h5><div class="flex flex-col space-y-4 text-xs text-white/50 tracking-wide"><a href="#" class="hover:text-white transition-colors">Instagram</a><a href="#" class="hover:text-white transition-colors">Pinterest</a><a href="#" class="hover:text-white transition-colors">Facebook</a><a href="#" class="hover:text-white transition-colors">Newsletter</a></div></div>
+        </div>
+        <div class="border-t border-white/10 py-7 px-6 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] text-white/50 uppercase relative z-10 gap-3"><p>© 2024 Creative Concepts. All rights reserved.</p><div class="flex gap-8"><a href="#" class="hover:text-white transition-colors">Privacy</a><a href="#" class="hover:text-white transition-colors">Terms</a></div></div>
+      </footer>
+    </main>
+    <script src="assets/site.js"></script>
+  </body>
+</html>
