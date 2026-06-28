@@ -3,124 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="About Creative Concepts — a Mumbai studio specialising in comprehensive interior & exterior architectural design. 15 years of craft, 874 completed projects." />
+    <meta name="description" content="About Creative Concepts — a Mumbai studio specialising in comprehensive interior & exterior design. 15 years, 874 completed projects." />
     <title>About | Creative Concepts</title>
     <link rel="icon" type="image/png" href="assets/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600&display=swap" rel="stylesheet" />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
-      tailwind.config = { theme: { extend: {
-        colors: { bg:"#F8F7F4", surface:"#FDFCF9", line:"#E5E4DE", ink:"#14152A", "ink-soft":"#45474C", accent:"#2D4470", "accent-deep":"#1E1B3A", midnight:"#14152A" },
-        fontFamily: { serif:['"Libre Caslon Text"',"Georgia","serif"], sans:['"Hanken Grotesk"',"system-ui","sans-serif"] },
-        borderRadius: { DEFAULT:"0px", sm:"0px", md:"0px", lg:"0px" },
-      }}};
-    </script>
-    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/site.css?v=2" />
   </head>
+  <body class="is-loading">
+    <div id="loader"><span class="wordmark">Creative Concepts</span><div id="loader-track"><div id="loader-fill"></div></div></div>
 
-  <body class="is-loading font-sans font-light selection:bg-accent selection:text-white relative">
-    <div id="loader"><img src="assets/logo.png" alt="Creative Concepts" class="loader-logo w-12 h-12 object-contain" /><div class="text-[10px] tracking-[0.4em] uppercase text-ink-soft font-normal">Creative Concepts</div><div id="loader-bar-track"><div id="loader-bar-fill"></div></div></div>
+    <header class="site-header solid">
+      <a href="index.html" class="brand"><img src="assets/logo.png" alt="" class="brand-mark" /><span class="brand-text">Creative Concepts</span></a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="nav-link" style="border:1px solid currentColor;padding:9px 18px;">Let's Talk</a>
+      </nav>
+      <button id="menu-btn" class="menu-toggle" aria-label="Open menu"><iconify-icon icon="ph:list" width="28"></iconify-icon></button>
+    </header>
+    <div id="mobile-menu" class="mobile-nav"><button id="menu-close" class="mobile-close" aria-label="Close menu"><iconify-icon icon="ph:x" width="30"></iconify-icon></button><a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a></div>
 
-    <div class="bg-midnight text-bg/80 text-[10px] sm:text-xs tracking-[0.25em] uppercase text-center py-2 px-3 relative z-50">Crafting considered interiors &amp; exteriors across India · Est. Mumbai</div>
-
-    <main class="max-w-[1440px] mx-auto bg-surface border-x border-line relative min-h-screen shadow-2xl shadow-black/[0.03] flex flex-col">
-      <div class="absolute top-0 left-0 w-3 h-3 border-t border-l border-ink/20 z-50 pointer-events-none"></div>
-      <div class="absolute top-0 right-0 w-3 h-3 border-t border-r border-ink/20 z-50 pointer-events-none"></div>
-      <div class="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-ink/20 z-50 pointer-events-none"></div>
-      <div class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-ink/20 z-50 pointer-events-none"></div>
-
-      <header class="flex items-center justify-between px-5 sm:px-6 py-4 border-b border-line relative z-40 bg-surface/90 backdrop-blur-sm sticky top-0">
-        <a href="index.html" class="flex items-center gap-2.5"><img src="assets/logo.png" alt="Creative Concepts logo" class="h-7 w-7 object-contain" /><span class="text-base sm:text-lg font-normal tracking-tight uppercase font-serif leading-none">Creative Concepts</span></a>
-        <nav class="hidden lg:flex space-x-8 text-[11px] tracking-[0.2em] uppercase text-ink-soft"><a href="index.html" class="hover:text-ink transition-colors">Home</a><a href="about.html" class="text-ink">About</a><a href="portfolio.html" class="hover:text-ink transition-colors">Portfolio</a><a href="contact.html" class="hover:text-ink transition-colors">Contact</a></nav>
-        <div class="flex items-center gap-4"><a href="contact.html" class="hidden sm:inline-block bg-ink text-surface text-[10px] tracking-[0.2em] uppercase px-5 py-2.5 hover:bg-accent transition-colors font-normal">Send Request</a><button id="menu-btn" class="lg:hidden text-ink" aria-label="Open menu"><iconify-icon icon="solar:hamburger-menu-linear" width="26"></iconify-icon></button></div>
-      </header>
-
-      <div id="mobile-menu" class="lg:hidden fixed inset-0 z-[60] bg-bg/98 backdrop-blur-md flex-col items-center justify-center gap-8 hidden"><button id="menu-close" class="absolute top-5 right-5 text-ink" aria-label="Close menu"><iconify-icon icon="solar:close-circle-linear" width="32"></iconify-icon></button><a href="index.html" class="mobile-link font-serif text-3xl">Home</a><a href="about.html" class="mobile-link font-serif text-3xl">About</a><a href="portfolio.html" class="mobile-link font-serif text-3xl">Portfolio</a><a href="contact.html" class="mobile-link font-serif text-3xl">Contact</a><a href="contact.html" class="mobile-link mt-4 bg-ink text-surface text-xs tracking-[0.25em] uppercase px-8 py-4 font-normal">Send Request</a></div>
-
-      <!-- PAGE HERO -->
-      <section class="relative border-b border-line overflow-hidden min-h-[58vh] flex flex-col justify-end px-5 sm:px-8 pb-12">
-        <img src="assets/projects/proj-53.png" alt="Creative Concepts interior project" class="kenburns w-full h-full object-cover absolute inset-0" />
-        <div class="absolute inset-0 bg-gradient-to-t from-midnight/85 via-midnight/35 to-midnight/10"></div>
-        <div class="relative z-10 max-w-3xl">
-          <div class="gsap-hero flex items-center gap-3 mb-5"><span class="h-[1px] w-10 bg-accent"></span><span class="text-[10px] sm:text-xs tracking-[0.35em] uppercase text-white/90 font-normal">The Practice</span></div>
-          <h1 class="gsap-hero font-serif text-white leading-[1.06] text-4xl sm:text-6xl tracking-tight">Transforming ideas into<br /><span class="italic">innovative design &amp; concepts.</span></h1>
+    <!-- INTRO -->
+    <section class="section" style="padding-top:clamp(130px,16vw,200px);">
+      <div class="wrap">
+        <p class="eyebrow reveal" style="margin-bottom:30px;">The Practice</p>
+        <h1 class="h-hero reveal" data-delay="0.06" style="max-width:16ch;margin-bottom:46px;">Transforming ideas into innovative design &amp; concepts</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2" style="gap:clamp(30px,5vw,70px);max-width:1100px;">
+          <p class="lead reveal" data-delay="0.1">Creative Concepts, located in the dynamic city of Mumbai, opens the door to a realm where client dreams take shape as visionary designs. We excel in crafting considerate and budget-friendly interior and exterior design concepts.</p>
+          <p class="body-sm reveal" data-delay="0.16">With over 15 years of proficiency, our top-notch design team orchestrates a flawless fusion of innovation. We specialise in comprehensive architectural services, ensuring a seamless integration of architectural brilliance and captivating design aesthetics.</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- META STRIP -->
-      <section class="bg-surface border-b border-line grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-line">
-        <div class="p-7 sm:p-8 gsap-fade-up"><span class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">Country</span><p class="font-serif text-2xl mt-2">India</p></div>
-        <div class="p-7 sm:p-8 gsap-fade-up" style="transition-delay:80ms"><span class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">City</span><p class="font-serif text-2xl mt-2">Mumbai</p></div>
-        <div class="p-7 sm:p-8 gsap-fade-up" style="transition-delay:160ms"><span class="text-[10px] tracking-[0.25em] uppercase text-ink-soft">Foundation</span><p class="font-serif text-2xl mt-2">May 2022</p></div>
-      </section>
+    <!-- FULL IMAGE -->
+    <section class="hover-zoom reveal" style="height:60vh;"><img src="assets/projects/proj-53.png" alt="Creative Concepts interior project" style="width:100%;height:100%;object-fit:cover;" /></section>
 
-      <!-- INTRO -->
-      <section class="bg-surface border-b border-line px-5 sm:px-8 py-16 sm:py-24">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8">
-          <div class="lg:col-span-5 gsap-fade-up"><span class="text-[10px] tracking-[0.3em] uppercase text-accent font-semibold">Who We Are</span><h2 class="font-serif text-3xl sm:text-4xl leading-[1.14] mt-5 tracking-tight">A curated gallery for physical spaces.</h2></div>
-          <div class="lg:col-span-6 lg:col-start-7 gsap-fade-up" style="transition-delay:100ms">
-            <p class="text-sm sm:text-base text-ink-soft leading-loose">Creative Concepts, located in the dynamic city of Mumbai, opens the door to a realm where client dreams take shape as visionary designs. We excel in crafting considerate and budget-friendly interior and exterior design concepts. With over 15 years of proficiency, our top-notch design team orchestrates a flawless fusion of innovation.</p>
-            <p class="text-sm text-ink-soft leading-loose mt-5">We specialise in comprehensive architectural services, catering to your needs for interior and exterior design. Our dedicated team brings expertise and innovation to every project, ensuring a seamless integration of architectural brilliance and captivating design aesthetics.</p>
-          </div>
+    <!-- META -->
+    <section class="section" style="background:var(--bg-2);">
+      <div class="wrap grid grid-cols-1 sm:grid-cols-3" style="gap:40px;">
+        <div class="reveal"><p class="eyebrow" style="margin-bottom:14px;">Country</p><p class="h-md font-display">India</p></div>
+        <div class="reveal" data-delay="0.08"><p class="eyebrow" style="margin-bottom:14px;">City</p><p class="h-md font-display">Mumbai</p></div>
+        <div class="reveal" data-delay="0.16"><p class="eyebrow" style="margin-bottom:14px;">Foundation</p><p class="h-md font-display">May 2022</p></div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="section" style="text-align:center;">
+      <div class="wrap reveal" style="max-width:1000px;">
+        <p class="eyebrow" style="margin-bottom:30px;">Our philosophy</p>
+        <h2 class="h-xl">Change is an opportunity — durable design that enhances closeness, wellbeing &amp; happiness.</h2>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section dark">
+      <div class="wrap grid grid-cols-2 lg:grid-cols-4" style="gap:44px 24px;">
+        <div class="stat reveal" data-target="15"><span class="stat-num">0</span><span class="eyebrow" style="display:block;margin-top:10px;">Years Experience</span></div>
+        <div class="stat reveal" data-target="874" data-delay="0.06"><span class="stat-num">0</span><span class="eyebrow" style="display:block;margin-top:10px;">Completed Projects</span></div>
+        <div class="stat reveal" data-target="158" data-delay="0.12"><span class="stat-num">0</span><span class="eyebrow" style="display:block;margin-top:10px;">Happy Customers</span></div>
+        <div class="stat reveal" data-target="10" data-delay="0.18"><span class="stat-num">0</span><span class="eyebrow" style="display:block;margin-top:10px;">Honors &amp; Awards</span></div>
+      </div>
+    </section>
+
+    <!-- SERVICES LIST -->
+    <section class="section">
+      <div class="wrap">
+        <div style="margin-bottom:clamp(36px,5vw,60px);"><p class="eyebrow reveal" style="margin-bottom:18px;">What we do</p><h2 class="h-lg reveal" data-delay="0.06">Comprehensive Services</h2></div>
+        <div>
+          <div class="reveal" style="display:grid;grid-template-columns:auto 1fr;gap:14px 28px;align-items:baseline;padding:30px 0;border-top:1px solid var(--line);"><span class="eyebrow">01</span><div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 40px;align-items:baseline;"><h3 class="h-md" style="min-width:240px;">Interior Design</h3><p class="body-sm" style="max-width:48ch;margin:0;">Space planning, bespoke joinery, lighting and styling for homes and workplaces.</p></div></div>
+          <div class="reveal" style="display:grid;grid-template-columns:auto 1fr;gap:14px 28px;align-items:baseline;padding:30px 0;border-top:1px solid var(--line);"><span class="eyebrow">02</span><div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 40px;align-items:baseline;"><h3 class="h-md" style="min-width:240px;">Exterior &amp; Facade</h3><p class="body-sm" style="max-width:48ch;margin:0;">From curb appeal to outdoor sanctuaries — captivating, durable exteriors.</p></div></div>
+          <div class="reveal" style="display:grid;grid-template-columns:auto 1fr;gap:14px 28px;align-items:baseline;padding:30px 0;border-top:1px solid var(--line);"><span class="eyebrow">03</span><div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 40px;align-items:baseline;"><h3 class="h-md" style="min-width:240px;">Turnkey Execution</h3><p class="body-sm" style="max-width:48ch;margin:0;">In-house project managers delivering concept to completion, on budget.</p></div></div>
+          <div class="reveal" style="display:grid;grid-template-columns:auto 1fr;gap:14px 28px;align-items:baseline;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);"><span class="eyebrow">04</span><div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 40px;align-items:baseline;"><h3 class="h-md" style="min-width:240px;">Commercial Fit-out</h3><p class="body-sm" style="max-width:48ch;margin:0;">Offices, cafeterias, lobbies and institutional spaces designed to perform.</p></div></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- IMAGE BREAK + QUOTE -->
-      <section class="bg-line border-b border-line grid grid-cols-1 lg:grid-cols-2 gap-[1px]">
-        <div class="relative min-h-[360px] overflow-hidden"><img src="assets/projects/proj-34.png" class="absolute inset-0 w-full h-full object-cover" alt="Backlit onyx feature wall" /></div>
-        <div class="bg-surface p-8 lg:p-16 flex flex-col justify-center gsap-fade-up"><iconify-icon icon="solar:double-alt-arrow-up-bold" class="text-accent mb-6" width="26" style="transform:rotate(45deg)"></iconify-icon><blockquote class="font-serif text-2xl sm:text-3xl italic leading-[1.4] tracking-tight">“Change is an opportunity. We want to lead people towards durable solutions and designs that enhance feelings of closeness, wellbeing and happiness.”</blockquote></div>
-      </section>
-
-      <!-- STATS -->
-      <section class="bg-surface border-b border-line px-5 sm:px-8 py-16 sm:py-20">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6">
-          <div class="stat" data-target="15"><span class="stat-num font-serif text-5xl sm:text-6xl block leading-none">0</span><span class="text-[10px] tracking-[0.2em] uppercase text-ink-soft mt-3 block">Years Experience</span></div>
-          <div class="stat" data-target="874"><span class="stat-num font-serif text-5xl sm:text-6xl block leading-none">0</span><span class="text-[10px] tracking-[0.2em] uppercase text-ink-soft mt-3 block">Completed Projects</span></div>
-          <div class="stat" data-target="158"><span class="stat-num font-serif text-5xl sm:text-6xl block leading-none">0</span><span class="text-[10px] tracking-[0.2em] uppercase text-ink-soft mt-3 block">Happy Customers</span></div>
-          <div class="stat" data-target="10"><span class="stat-num font-serif text-5xl sm:text-6xl block leading-none">0</span><span class="text-[10px] tracking-[0.2em] uppercase text-ink-soft mt-3 block">Honors &amp; Awards</span></div>
+    <!-- TESTIMONIALS -->
+    <section class="section" style="background:var(--bg-2);">
+      <div class="wrap">
+        <div style="text-align:center;margin-bottom:clamp(40px,6vw,72px);"><p class="eyebrow reveal" style="margin-bottom:18px;">Voices</p><h2 class="h-lg reveal" data-delay="0.06">Testimonials</h2></div>
+        <div class="grid grid-cols-1 md:grid-cols-3" style="gap:40px;">
+          <figure class="reveal" style="margin:0;"><p class="font-display" style="font-style:italic;font-size:1.35rem;line-height:1.5;margin:0 0 26px;color:var(--head);">“Creative Concepts transformed our living space with a perfect blend of architecture and interior design. Their attention to detail made our home a true masterpiece.”</p><figcaption class="eyebrow" style="color:var(--head);">Ankita Pandy — Customer</figcaption></figure>
+          <figure class="reveal" data-delay="0.1" style="margin:0;"><p class="font-display" style="font-style:italic;font-size:1.35rem;line-height:1.5;margin:0 0 26px;color:var(--head);">“Working with Creative Concepts was a delight. Their architectural expertise and stylish interior solutions exceeded our expectations.”</p><figcaption class="eyebrow" style="color:var(--head);">Pawan Gupta — Customer</figcaption></figure>
+          <figure class="reveal" data-delay="0.2" style="margin:0;"><p class="font-display" style="font-style:italic;font-size:1.35rem;line-height:1.5;margin:0 0 26px;color:var(--head);">“Creative Concepts took our dream home from vision to reality. The result truly reflects our style and personality.”</p><figcaption class="eyebrow" style="color:var(--head);">Nupur Bhushan — Customer</figcaption></figure>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SERVICES -->
-      <section class="bg-surface border-b border-line px-5 sm:px-8 py-16 sm:py-24">
-        <div class="mb-10"><span class="text-[10px] tracking-[0.3em] uppercase text-accent font-semibold">What We Do</span><h2 class="font-serif text-2xl sm:text-3xl tracking-tight mt-2">Comprehensive Services</h2></div>
-        <div class="border-t border-line">
-          <div class="grid grid-cols-1 sm:grid-cols-[auto,1fr,auto] gap-2 sm:gap-8 items-baseline py-6 border-b border-line group gsap-fade-up"><span class="text-[11px] tracking-[0.2em] text-ink-soft">01</span><h3 class="font-serif text-xl sm:text-2xl">Interior Design</h3><p class="text-sm text-ink-soft sm:text-right max-w-md">Space planning, bespoke joinery, lighting &amp; styling for homes and workplaces.</p></div>
-          <div class="grid grid-cols-1 sm:grid-cols-[auto,1fr,auto] gap-2 sm:gap-8 items-baseline py-6 border-b border-line group gsap-fade-up"><span class="text-[11px] tracking-[0.2em] text-ink-soft">02</span><h3 class="font-serif text-xl sm:text-2xl">Exterior &amp; Facade</h3><p class="text-sm text-ink-soft sm:text-right max-w-md">From curb appeal to outdoor sanctuaries — captivating, durable exteriors.</p></div>
-          <div class="grid grid-cols-1 sm:grid-cols-[auto,1fr,auto] gap-2 sm:gap-8 items-baseline py-6 border-b border-line group gsap-fade-up"><span class="text-[11px] tracking-[0.2em] text-ink-soft">03</span><h3 class="font-serif text-xl sm:text-2xl">Turnkey Execution</h3><p class="text-sm text-ink-soft sm:text-right max-w-md">In-house project managers delivering concept to completion, on budget.</p></div>
-          <div class="grid grid-cols-1 sm:grid-cols-[auto,1fr,auto] gap-2 sm:gap-8 items-baseline py-6 border-b border-line group gsap-fade-up"><span class="text-[11px] tracking-[0.2em] text-ink-soft">04</span><h3 class="font-serif text-xl sm:text-2xl">Commercial Fit-out</h3><p class="text-sm text-ink-soft sm:text-right max-w-md">Offices, cafeterias, lobbies and institutional spaces designed to perform.</p></div>
+    <!-- CTA -->
+    <section class="section dark" style="text-align:center;">
+      <div class="wrap reveal"><p class="eyebrow" style="margin-bottom:26px;">Let's begin</p><h2 class="h-xl" style="margin-bottom:42px;">Do you have a project?</h2><a href="contact.html" class="btn" style="color:var(--cream);border-color:var(--cream);">Let's Discuss <iconify-icon icon="ph:arrow-right" width="15"></iconify-icon></a></div>
+    </section>
+
+    <footer class="dark" style="border-top:1px solid rgba(235,231,222,.15);">
+      <div class="wrap" style="padding:clamp(56px,8vw,90px) 28px;">
+        <div class="grid grid-cols-1 md:grid-cols-4" style="gap:44px;">
+          <div><a href="index.html" class="brand" style="margin-bottom:22px;"><img src="assets/logo.png" alt="" class="brand-mark" /><span class="brand-text" style="color:var(--cream);">Creative Concepts</span></a><p class="body-sm" style="max-width:30ch;">Crafting modern interiors &amp; exteriors with intentional, timeless design — based in Mumbai.</p></div>
+          <div><p class="eyebrow" style="margin-bottom:22px;">Studio</p><div style="display:flex;flex-direction:column;gap:14px;"><a href="about.html" class="link-caps" style="color:rgba(235,231,222,.7);">About</a><a href="portfolio.html" class="link-caps" style="color:rgba(235,231,222,.7);">Portfolio</a><a href="contact.html" class="link-caps" style="color:rgba(235,231,222,.7);">Contact</a></div></div>
+          <div><p class="eyebrow" style="margin-bottom:22px;">Contact</p><div style="display:flex;flex-direction:column;gap:14px;"><span class="body-sm">Andheri West, Mumbai 400053</span><a href="tel:02242654353" class="link-caps" style="color:rgba(235,231,222,.7);">022 4265 4353</a><a href="mailto:mayuradw@yahoo.co.in" class="link-caps" style="color:rgba(235,231,222,.7);text-transform:none;letter-spacing:.05em;">mayuradw@yahoo.co.in</a></div></div>
+          <div><p class="eyebrow" style="margin-bottom:22px;">Connect</p><div style="display:flex;gap:16px;"><a href="#" aria-label="Instagram" style="color:var(--cream);"><iconify-icon icon="ph:instagram-logo" width="22"></iconify-icon></a><a href="#" aria-label="Pinterest" style="color:var(--cream);"><iconify-icon icon="ph:pinterest-logo" width="22"></iconify-icon></a><a href="#" aria-label="Facebook" style="color:var(--cream);"><iconify-icon icon="ph:facebook-logo" width="22"></iconify-icon></a></div></div>
         </div>
-      </section>
-
-      <!-- TESTIMONIALS -->
-      <section class="bg-surface border-b border-line px-5 sm:px-8 py-16 sm:py-24">
-        <div class="text-center mb-12"><span class="text-[10px] tracking-[0.3em] uppercase text-accent font-semibold">Voices</span><h2 class="font-serif text-2xl sm:text-3xl tracking-tight mt-2">Testimonials</h2></div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <figure class="border border-line p-7 bg-white gsap-fade-up"><div class="flex gap-0.5 text-accent mb-5"><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon></div><blockquote class="font-serif text-base italic leading-relaxed text-ink">“Creative Concepts transformed our living space with a perfect blend of architecture and interior design. Their attention to detail and innovative ideas made our home a true masterpiece.”</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="w-9 h-9 bg-ink text-white text-[11px] flex items-center justify-center">AP</span><span><span class="block text-[11px] tracking-[0.15em] uppercase">Ankita Pandy</span><span class="text-[10px] tracking-[0.2em] uppercase text-ink-soft">Customer</span></span></figcaption></figure>
-          <figure class="border border-line p-7 bg-white gsap-fade-up" style="transition-delay:80ms"><div class="flex gap-0.5 text-accent mb-5"><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon></div><blockquote class="font-serif text-base italic leading-relaxed text-ink">“Working with Creative Concepts was a delight! Their architectural expertise and stylish interior solutions exceeded our expectations. Our office space is now a showcase of professionalism and creativity.”</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="w-9 h-9 bg-ink text-white text-[11px] flex items-center justify-center">PG</span><span><span class="block text-[11px] tracking-[0.15em] uppercase">Pawan Gupta</span><span class="text-[10px] tracking-[0.2em] uppercase text-ink-soft">Customer</span></span></figcaption></figure>
-          <figure class="border border-line p-7 bg-white gsap-fade-up" style="transition-delay:160ms"><div class="flex gap-0.5 text-accent mb-5"><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon><iconify-icon icon="solar:star-bold" width="14"></iconify-icon></div><blockquote class="font-serif text-base italic leading-relaxed text-ink">“Creative Concepts took our dream home from vision to reality. Their architectural prowess and thoughtful interior design created a space that truly reflects our style and personality.”</blockquote><figcaption class="flex items-center gap-3 mt-7"><span class="w-9 h-9 bg-ink text-white text-[11px] flex items-center justify-center">NB</span><span><span class="block text-[11px] tracking-[0.15em] uppercase">Nupur Bhushan</span><span class="text-[10px] tracking-[0.2em] uppercase text-ink-soft">Customer</span></span></figcaption></figure>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="bg-surface border-b border-line px-5 sm:px-8 py-16 sm:py-24 text-center"><div class="gsap-fade-up max-w-2xl mx-auto"><h2 class="font-serif text-3xl sm:text-4xl tracking-tight mb-8">Do you have a project?</h2><a href="contact.html" class="inline-block bg-ink text-surface text-[11px] tracking-[0.2em] uppercase px-12 py-5 hover:bg-accent transition-colors font-normal">Let's Discuss</a></div></section>
-
-      <!-- FOOTER -->
-      <footer class="bg-midnight text-bg mt-auto relative overflow-hidden bg-noise">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 pt-16 pb-14 relative z-10">
-          <div class="flex flex-col"><a href="index.html" class="flex items-center gap-2.5 mb-6"><img src="assets/logo.png" alt="" class="h-7 w-7 object-contain" /><span class="text-lg font-normal tracking-tight uppercase font-serif text-white">Creative Concepts</span></a><p class="text-xs text-white/50 leading-relaxed max-w-xs">Crafting modern interiors &amp; exteriors with intentional, functional and timeless design — based in Mumbai.</p></div>
-          <div class="flex flex-col"><h5 class="text-[11px] tracking-[0.2em] uppercase font-normal mb-6 text-white">Studio</h5><div class="flex flex-col space-y-4 text-xs text-white/50 tracking-wide"><a href="about.html" class="hover:text-white transition-colors">About</a><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a><a href="index.html#disciplines" class="hover:text-white transition-colors">Expertise</a><a href="index.html#journal" class="hover:text-white transition-colors">Journal</a></div></div>
-          <div class="flex flex-col"><h5 class="text-[11px] tracking-[0.2em] uppercase font-normal mb-6 text-white">Contact</h5><div class="flex flex-col space-y-4 text-xs text-white/50 tracking-wide"><span>Andheri West, Mumbai 400053</span><a href="tel:02242654353" class="hover:text-white transition-colors">022 4265 4353</a><a href="mailto:mayuradw@yahoo.co.in" class="hover:text-white transition-colors break-all">mayuradw@yahoo.co.in</a></div></div>
-          <div class="flex flex-col"><h5 class="text-[11px] tracking-[0.2em] uppercase font-normal mb-6 text-white">Connect</h5><div class="flex flex-col space-y-4 text-xs text-white/50 tracking-wide"><a href="#" class="hover:text-white transition-colors">Instagram</a><a href="#" class="hover:text-white transition-colors">Pinterest</a><a href="#" class="hover:text-white transition-colors">Facebook</a><a href="#" class="hover:text-white transition-colors">Newsletter</a></div></div>
-        </div>
-        <div class="border-t border-white/10 py-7 px-6 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] text-white/50 uppercase relative z-10 gap-3"><p>© 2024 Creative Concepts. All rights reserved.</p><div class="flex gap-8"><a href="#" class="hover:text-white transition-colors">Privacy</a><a href="#" class="hover:text-white transition-colors">Terms</a></div></div>
-      </footer>
-    </main>
-    <script src="assets/site.js"></script>
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(235,231,222,.15);margin-top:56px;padding-top:28px;"><span class="eyebrow" style="color:rgba(235,231,222,.5);">© 2024 Creative Concepts</span><span class="eyebrow" style="color:rgba(235,231,222,.5);">Mumbai · India</span></div>
+      </div>
+    </footer>
+    <script src="assets/site.js?v=2"></script>
   </body>
 </html>
