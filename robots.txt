@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://creativeconcepts.services/sitemap.xml
+Sitemap: https://1414mishal.github.io/creative-concepts/sitemap.xml
