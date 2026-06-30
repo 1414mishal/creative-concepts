@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://1414mishal.github.io/creative-concepts/sitemap.xml
